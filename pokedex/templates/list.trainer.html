@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Trainers{% endblock title %}
+{% block content %}
+    <div class="container">
+        <h2 style="margin-top: 1em; margin-bottom: 1em;" class="text-center">Trainers</h2>
+        <ul class="list-group">
+            {% for trainer in trainers %}
+            <li class="list-group-item">
+                <img src="{% static 'pokeball.svg' %}" alt="Pokeball" style="width:24px; height:24px; margin-right:10px;">
+                <a href="{{trainer.id}}">{{ trainer | capfirst }}</a>
+                <p style="text-indent: 2.3em;">{{trainer.region}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="d-flex justify-content-center">
+            <a href="/">
+                <button style="margin-top: 3em; margin-bottom: 3em;" class="btn btn-outline-primary btn-lg btn-block">
+                    <h6>Return</h6>
+                </button>
+            </a>
+        </div>
+    </div>
+{% endblock content %}
