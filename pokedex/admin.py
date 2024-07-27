@@ -3,7 +3,7 @@ from .models import Pokemon, Trainer
 
 # Register your models here.
 @admin.register(Pokemon)
-class PokemnAdmin(admin.ModelAdmin):
+class PokemonAdmin(admin.ModelAdmin):
     pass
 
 @admin.register(Trainer)

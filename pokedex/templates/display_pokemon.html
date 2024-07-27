@@ -1,21 +1,11 @@
 {% extends "base.html" %}
-{% load static %}
-{% block title %}{{trainer}}{% endblock title %}
+{% block title %}{{ pokemon }}{% endblock title %}
 {% block content %}
-    <div class="container">
-        <p style="font-size: 1.7em; margin-top: 1em; margin-bottom: 1em;" class= "text-center"><strong>{{ pokemon | capfirst }}</strong> details</p>
-        <h3>Features:</h3>
-        <ul class="list-group">
-            <li class="list-group-item"><strong><img src="{% static 'pokeball.svg' %}" alt="Pokeball" style="width:24px; height:24px; margin-right:10px;">Type:</strong> {{ pokemon.get_type_display }}</li>
-            <li class="list-group-item"><strong><img src="{% static 'pokeball.svg' %}" alt="Pokeball" style="width:24px; height:24px; margin-right:10px;">Weight:</strong> {{ pokemon.weight }}kg</li>
-            <li class="list-group-item"><strong><img src="{% static 'pokeball.svg' %}" alt="Pokeball" style="width:24px; height:24px; margin-right:10px;">Height:</strong> {{ pokemon.height }}cm</li> 
-        </ul>
-        <div class="d-flex justify-content-center">
-            <a href="/pokemon">
-                <button style="margin-top: 3em;" class="btn btn-outline-primary btn-lg btn-block">
-                    <h6>Return</h6>
-                </button>
-            </a>
-        </div>
-    </div>
+<p>Has elegido el pokemon: <strong>{{ pokemon | capfirst }}</strong></p>
+<h3>Caracteristicas:</h3>
+<ul>
+    <li>Tipo: {{ pokemon.type }}</li>
+    <li>Peso: {{ pokemon.weight }} kg</li>
+    <li>Altura: {{ pokemon.height }} cm</li>
+</ul>
 {% endblock content %}

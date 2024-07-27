@@ -77,12 +77,16 @@ WSGI_APPLICATION = 'lab8.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pokedex_brandoon',
-        'USER': 'postgres',
-        'PASSWORD': 'pucetec',
+        'NAME': 'pokedexbrandon',
         'HOST': 'localhost',
         'PORT': '5432',
-    }
+        'USER': 'postgres',
+        'PASSWORD': 'corei5'
+    }#,
+    #    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
 }
 
 
@@ -123,7 +127,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-#Media Files
+#Media files
+
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
@@ -132,8 +137,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#AUTH CONFIGS
-
+#Configuracion de autentificación
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = 'pokedex:login'
